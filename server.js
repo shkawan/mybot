@@ -16,22 +16,10 @@ var bot = new builder.UniversalBot(conn);
 server.post('/api/messages', conn.listen());
 
 var intents = new builder.IntentDialog();
+
 bot.dialog('/', intents);
-intents.matches('take', function (session) {
+intents.matches('^get', function (session) {
   session.send('get started');
 });
 
-
-// bot.dialog('/', function(session) {
-//   session.send('Hello World');
-// });
-// bot.dialog('/profile', [
-//     function (session) {
-//         builder.Prompts.text(session, 'Hi! What is your name?');
-//     },
-//     function (session, results) {
-//         session.userData.name = results.response;
-//         session.endDialog();
-//     }
-// ]);
 
