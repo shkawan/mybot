@@ -15,6 +15,14 @@ var conn = new builder.ChatConnector(app_params);
 var bot = new builder.UniversalBot(conn);
 server.post('/api/messages', conn.listen());
 
+var t = new builder.CommandDialog();
+t.matches('take', function (session) {
+  session.send('get started');
+
+});
+
+
+
 bot.dialog('/', function(session) {
   session.send('Hello World');
 });
@@ -28,8 +36,3 @@ bot.dialog('/profile', [
     }
 ]);
 
-var t = new builder.CommandDialog();
-t.matches('take', function (session) {
-  session.send('get started');
-
-});
