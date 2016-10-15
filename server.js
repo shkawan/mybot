@@ -15,7 +15,7 @@ var conn = new builder.ChatConnector(app_params);
 var bot = new builder.UniversalBot(conn);
 server.post('/api/messages', conn.listen());
 
-var t = new builder.CommandDialog();
+var t = new builder.IntentDialog();
 t.matches('take', function (session) {
   session.send('get started');
 
