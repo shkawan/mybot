@@ -15,12 +15,11 @@ var conn = new builder.ChatConnector(app_params);
 var bot = new builder.UniversalBot(conn);
 server.post('/api/messages', conn.listen());
 
-var t = new builder.IntentDialog();
-t.matches('take', function (session) {
+var intents = new builder.IntentDialog();
+bot.dialog('/', intents);
+intents.matches('take', function (session) {
   session.send('get started');
-
 });
-
 
 
 // bot.dialog('/', function(session) {
