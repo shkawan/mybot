@@ -9,7 +9,7 @@ server.listen(port, function() {
 
 var app_params = {
   appId: '69adfd60-052f-46c5-8222-ef9bd7ef6530',
-  appSecret: 'EoW9Kq8XRYHofAixpx32VYU'
+  appSecret: 'R9GgXCLFahdPGFmUed1Ytci'
 };
 var conn = new builder.ChatConnector(app_params);
 var bot = new builder.UniversalBot(conn);
