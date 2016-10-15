@@ -27,3 +27,9 @@ bot.dialog('/profile', [
         session.endDialog();
     }
 ]);
+
+var t = new builder.CommandDialog();
+t.matches('take', function (session) {
+  session.send('get started');
+
+});
