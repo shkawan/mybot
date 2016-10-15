@@ -23,16 +23,16 @@ t.matches('take', function (session) {
 
 
 
-bot.dialog('/', function(session) {
-  session.send('Hello World');
-});
-bot.dialog('/profile', [
-    function (session) {
-        builder.Prompts.text(session, 'Hi! What is your name?');
-    },
-    function (session, results) {
-        session.userData.name = results.response;
-        session.endDialog();
-    }
-]);
+// bot.dialog('/', function(session) {
+//   session.send('Hello World');
+// });
+// bot.dialog('/profile', [
+//     function (session) {
+//         builder.Prompts.text(session, 'Hi! What is your name?');
+//     },
+//     function (session, results) {
+//         session.userData.name = results.response;
+//         session.endDialog();
+//     }
+// ]);
 
