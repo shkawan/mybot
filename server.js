@@ -18,7 +18,7 @@ server.post('/api/messages', conn.listen());
 var intents = new builder.IntentDialog();
 
 bot.dialog('/', intents);
-intents.matches('^get', function (session) {
+intents.matches('^.', function (session) {
   session.send('get started');
 });
 
